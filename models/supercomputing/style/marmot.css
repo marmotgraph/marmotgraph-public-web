@@ -1,0 +1,28 @@
+.md-typeset h1 {
+  margin: 0;
+}
+
+[data-md-color-scheme="marmot"] {
+  --md-primary-fg-color:        #141618;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+
+.md-copyright {
+  text-align: center;
+  margin:auto
+}
+
+.md-copyright div {
+  display: flex;
+  align-items:center;
+  margin-bottom: 0.5em;
+}
+.md-copyright span{
+  vertical-align: middle;
+}
+
+.md-copyright img{
+  height: 2.5em;
+  vertical-align: center;
+}

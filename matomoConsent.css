@@ -1,0 +1,91 @@
+/* public/matomo-consent.css */
+
+/* Container */
+#matomo-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2E3744;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 9999;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #E2E8F0;
+}
+
+#matomo-consent-banner button.btn,
+.matomo-consent-banner .btn-primary {
+    background: #4a90e2;
+}
+
+/* Title */
+#matomo-consent-banner h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #0097A7;
+}
+
+/* Text & list */
+#matomo-consent-banner p,
+#matomo-consent-banner ul {
+    margin: 0.5rem 0;
+    line-height: 1.45;
+}
+#matomo-consent-banner ul {
+    padding-left: 1.2rem;
+}
+
+/* Checkbox label */
+#matomo-consent-banner label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Button */
+#matomo-consent-banner button.btn {
+    border: none;
+    padding: 0.4rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#matomo-consent-banner .btn-primary {
+    background:#0097A7 !important;
+    color:#fff;
+}
+#matomo-consent-banner .btn-primary:hover {
+    background:#4DD0E1;
+    color:#003366;
+}
+#matomo-consent-banner .btn-secondary {
+    background:#e0e0e0 !important;
+    color:#333;
+}
+#matomo-consent-banner .btn-secondary:hover {
+    background:#c5c5c5;
+}
+
+/* Responsive tweak – keep it narrower on very wide screens */
+@media (min-width: 1200px) {
+    #matomo-consent-banner {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    #matomo-consent-banner .btn-primary {
+        min-width: 100%;
+        margin-right: 0!important;
+        margin-bottom: 0.5rem;
+    }
+    #matomo-consent-banner .btn-secondary {
+        margin-bottom: 0.5rem;
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,167 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cscs.ch",
+      "name": "CSCS Swiss National Supercomputing Centre",
+      "url": "https://www.cscs.ch",
+      "logo": "https://www.marmotgraph.org/static/media/CSCS_fondoNero.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Trevano 131",
+        "addressLocality": "Lugano",
+        "postalCode": "6900",
+        "addressCountry": "CH"
+      },
+      "telephone": "+41 91 610 82 11",
+      "faxNumber": "+41 91 610 82 82",
+      "email": "info@cscs.ch",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "ETH Zurich",
+        "url": "https://ethz.ch"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.marmotgraph.org",
+      "name": "MarmotGraph",
+      "description": "A complete solution for building, managing, and querying knowledge graphs with powerful tools and intuitive interfaces. Domain-agnostic platform for scientific data management that enables FAIR data principles.",
+      "url": "https://www.marmotgraph.org",
+      "applicationCategory": "Data Management Software",
+      "applicationSubCategory": "Knowledge Graph Platform",
+      "operatingSystem": "Web-based",
+      "softwareVersion": "2024",
+      "datePublished": "2024",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://www.cscs.ch"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Prof. Dr. Thomas Schulthess",
+        "affiliation": ["CSCS", "ETH Zurich"]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Interactive graph visualization",
+        "Advanced search interface",
+        "Data editor and manager",
+        "Query Builder with intuitive interface",
+        "Data visualization tools",
+        "RESTful APIs",
+        "Automation workflows",
+        "FAIR data compliance",
+        "Multi-domain support"
+      ],
+      "keywords": [
+        "knowledge graph",
+        "data management",
+        "FAIR data",
+        "scientific data",
+        "graph database",
+        "data visualization",
+        "metadata management",
+        "semantic web",
+        "research data"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.marmotgraph.org/#website",
+      "name": "MarmotGraph",
+      "url": "https://www.marmotgraph.org",
+      "description": "MarmotGraph is an innovative platform designed to revolutionize data visualization and graph analysis, making complex data accessible and understandable.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.cscs.ch"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.marmotgraph.org/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "copyrightYear": "2024",
+      "copyrightHolder": {
+        "@type": "Organization",
+        "@id": "https://www.cscs.ch"
+      },
+      "license": "Copyright CSCS",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@marmotgraph.org",
+      "availableLanguage": "English"
+    },
+    {
+      "@type": "Person",
+      "name": "Dr. Oliver Schmid",
+      "jobTitle": ["Editor", "Webmaster"],
+      "affiliation": ["CSCS", "ETH Zurich"],
+      "workLocation": "Switzerland"
+    },
+    {
+      "@type": "Person",
+      "name": "Claudio Goffi",
+      "jobTitle": "Editor",
+      "affiliation": ["CSCS", "ETH Zurich"],
+      "workLocation": "Switzerland"
+    },
+    {
+      "@type": "Person",
+      "name": "Annapaola Iolanda Santarsiero",
+      "jobTitle": "Editor",
+      "affiliation": ["CSCS", "ETH Zurich"],
+      "workLocation": "Switzerland"
+    },
+    {
+      "@type": "Person",
+      "name": "Prof. Dr. Thomas Schulthess",
+      "jobTitle": "Publisher",
+      "affiliation": ["CSCS", "ETH Zurich"],
+      "workLocation": "Switzerland"
+    },
+    {
+      "@type": "Project",
+      "name": "EBRAINS Knowledge Graph",
+      "description": "A metadata management system built for EBRAINS",
+      "url": "https://docs.kg.ebrains.eu/",
+      "parentProject": {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.marmotgraph.org"
+      }
+    },
+    {
+      "@type": "Project",
+      "name": "TEF-Health",
+      "description": "Technical and scientific support for Health AI providers and notified bodies",
+      "url": "https://tef-health.kg.ebrains.eu",
+      "parentProject": {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.marmotgraph.org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "name": "Legal Disclosure",
+      "description": "Copyright, trademark rights, data protection and legal information for MarmotGraph",
+      "url": "https://www.marmotgraph.org/imprint",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.marmotgraph.org/imprint"
+      },
+      "copyrightHolder": {
+        "@type": "Organization",
+        "@id": "https://www.cscs.ch"
+      },
+      "copyrightYear": "2024"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/assets/favicon-CfaszkSw.ico" />
+    <link rel="stylesheet" href="/matomoConsent.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="MarmotGraph"
+    />
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      // Consent check
+      _paq.push(['requireConsent']);
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.marmotgraph.org"]);
+      _paq.push(["setDomains", ["*.marmotgraph.org"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+
+      (function() {
+        var u="https://matomo.cscs.ch/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '39']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+
+
+    <title>MarmotGraph</title>
+    <script type="module" crossorigin src="/assets/index-BVy6LZ_7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BAQyb70B.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!-- Consent Form HTML -->
+    <div id="matomo-consent-banner" style="display: none;">
+      <div class="row">
+        <h3 class="col-7 mb-0">We value your privacy</h3>
+        <a href="#" id="matomo-consent-continue" class="col-5 text-end ms-auto">Continue without agreeing</a>
+      </div>
+
+      <p>We use <a target="_blank" href="https://matomo.org/">Matomo Analytics</a> to understand how visitors use our website.
+      <ul>
+        <li>Your data is stored securely on our own servers.</li>
+        <li>Your IP address is anonymized before being stored.</li>
+        <li>We do not share your data with any third parties.</li>
+      </ul>
+      <p>You can choose to opt in or out of tracking.</p>
+      <div style="margin-top:1rem; text-align:right;">
+        <button id="matomo-consent-reject" class="btn btn-secondary" style="margin-right:0.5rem;">I reject</button>
+        <button id="matomo-consent-accept" class="btn btn-primary">I consent</button>
+      </div>
+    </div>
+    <script>
+        const consentKey = 'matomoConsentGiven';
+        const consentBanner = document.getElementById('matomo-consent-banner');
+        const acceptBtn = document.getElementById('matomo-consent-accept');
+        const rejectBtn = document.getElementById('matomo-consent-reject');
+        const continueLink = document.getElementById('matomo-consent-continue');
+
+        const stored = localStorage.getItem(consentKey);
+        if (stored === 'true') {
+            // User already consented
+            _paq.push(['rememberConsentGiven']);
+            consentBanner.style.display = 'none';
+        } else if (stored === 'false') {
+            // User already rejected
+            _paq.push(['forgetConsentGiven']);
+            consentBanner.style.display = 'none';
+        } else {
+            // No decision yet → show banner
+            consentBanner.style.display = 'block';
+        }
+
+        function setConsent(given) {
+            if (given) {
+                _paq.push(['rememberConsentGiven']);
+                localStorage.setItem(consentKey, 'true');
+            } else {
+                _paq.push(['forgetConsentGiven']);
+                localStorage.setItem(consentKey, 'false');
+            }
+            consentBanner.style.display = 'none';
+        }
+
+        acceptBtn.addEventListener('click', () => setConsent(true));
+        rejectBtn.addEventListener('click', () => setConsent(false));
+        continueLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            consentBanner.style.display = 'none';
+        });
+    </script>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
